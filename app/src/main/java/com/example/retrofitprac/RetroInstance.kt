@@ -27,7 +27,7 @@ class RetroInstance private constructor() {
     private val myApi: dataApi
 
     init {
-        val retrofit: Retrofit = Retrofit.Builder().baseUrl("https://jsonplaceholder.typicode.com/")
+        val retrofit: Retrofit = Retrofit.Builder().baseUrl("https://dummyjson.com/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
         myApi = retrofit.create(dataApi::class.java)

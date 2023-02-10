@@ -1,7 +1,9 @@
 package com.example.retrofitprac
 
+import com.example.retrofitprac.dataClass.CustomModel
 import retrofit2.Call
 import retrofit2.http.GET
+import retrofit2.http.Query
 
 //interface MovieApi {
 //    @GET("popular?")
@@ -18,9 +20,14 @@ import retrofit2.http.GET
 //    }
 //}
 
+//interface dataApi{
+//
+//    @GET("todos/")
+//    fun getData() : Call<List<CustomModelElement>>
+//
+//}
+
 interface dataApi{
-
-    @GET("todos/")
-    fun getData() : Call<List<CustomModelElement>>
-
+    @GET("carts")
+    fun getData() : Call<CustomModel>
 }
